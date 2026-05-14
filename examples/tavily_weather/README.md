@@ -5,7 +5,7 @@ SPDX-License-Identifier: Apache-2.0
 
 # Tavily Weather (LangChain ReAct + Anthropic)
 
-Smoke-test workflow for the `nvidia-nat-tavily` package. A LangChain ReAct agent runs against Claude Sonnet 4.6 (via LiteLLM) with the Tavily tools (`search`, `extract`).
+Smoke-test workflow for the `nemo-agent-toolkit-tavily` package. A LangChain ReAct agent runs against Claude Sonnet 4.6 (via LiteLLM) with the Tavily tools (`search`, `extract`).
 
 ## Run
 
@@ -13,10 +13,8 @@ Smoke-test workflow for the `nvidia-nat-tavily` package. A LangChain ReAct agent
 export TAVILY_API_KEY=...
 export ANTHROPIC_API_KEY=...
 
-uv sync --extra langchain --extra tavily
-
 uv run nat run \
-  --config_file examples/tavily_weather/src/nat_tavily_weather/configs/config.yml \
+  --config_file src/nat_tavily_weather/configs/config.yml \
   --input "What is the weather in San Francisco right now?"
 ```
 

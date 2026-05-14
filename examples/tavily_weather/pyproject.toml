@@ -26,15 +26,15 @@ where = ["src"]
 
 [project]
 name = "nat_tavily_weather"
-dynamic = ["version", "dependencies"]
+dynamic = ["version"]
 requires-python = ">=3.11,<3.14"
 description = "Tavily + LangChain ReAct + Anthropic example workflow"
 keywords = ["ai", "agents", "tavily", "anthropic"]
 classifiers = ["Programming Language :: Python"]
 
-[tool.setuptools_dynamic_dependencies]
 dependencies = [
-  "nvidia-nat[langchain,tavily] == {version}",
+  "nvidia-nat[langchain]",
+  "nemo-agent-toolkit-tavily",
 ]
 
 [tool.uv.sources]
